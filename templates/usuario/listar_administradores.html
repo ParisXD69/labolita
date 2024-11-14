@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block widgets %}
+
+{% endblock %}
+{% block contenido %}
+<div class="table-stats order-table ov-h">
+            <table id="tabla_autores" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Usuario</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in object_list %}
+                    <tr>
+                        <td></td>
+                        <td>{{ i.username }}</td>
+                        <td>{{ i.nombre }}</td>
+                        <td>{{ i.apellidos }}</td>
+                        <td><a type="button" class="btn btn-danger" href="">Eliminar</a></td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block widgets %}
+{% endblock %}
+{% block contenido %}
+<div class="table-stats order-table ov-h">
+    <table id="tabla_autores" class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Administrador</th>
+            <th>Usuario</th>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in object_list %}
+        <tr>
+            <td></td>
+            <td>{{ i.admin }}</td>
+            <td>{{ i.usuer }}</td>
+            <td>{{ i.tipo }}</td>
+            {% if i.tipo == 'retiro'%}
+            <td style="background-color:rgba(255,35,39,0.46)">{{ i.monto }}</td>
+            {% else %}
+            <td style="background-color:rgba(57,255,9,0.46)">{{ i.monto }}</td>
+            {% endif %}
+            <td>{{i.fecha}}</td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

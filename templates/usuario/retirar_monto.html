@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block widgets %}
+{% endblock %}
+{% block contenido %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-success">Retirar</button>
+</form>
+{% endblock %}

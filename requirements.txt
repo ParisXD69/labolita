@@ -1,0 +1,6 @@
+django
+django_cron
+mysqlclient
+psycopg2
+pillow
+swapper

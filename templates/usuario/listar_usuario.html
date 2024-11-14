@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block widgets %}
+
+{% endblock %}
+{% block contenido %}
+{% block j_ganadora %}
+{% endblock %}
+<form method="get">
+    {% csrf_token %}
+    <input name="buscar" class="form-control" placeholder="Buscar" style="width: 20%;margin-left: 70%;display: inline-block">
+    <button type="submit" class="btn btn-success">Buscar</button>
+</form>
+<div class="table-stats order-table ov-h">
+    <table id="tabla_autores" class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Usuario</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th style="text-align: center">Opciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in lista %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td>{{ i.username }}</td>
+            <td>{{ i.nombre }}</td>
+            <td>{{ i.apellidos }}</td>
+            <td><a href="{% url 'retirar' i.id%}" class="btn btn-warning">Retirar</a> <a type="button"
+                                                                                         class="btn btn-success"
+                                                                                         href="{% url 'ingresar' i.id %}">Ingresar</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

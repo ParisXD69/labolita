@@ -1,0 +1,35 @@
+{% extends 'index.html'%}
+{% block contenido %}
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Apuesta</h2>
+        </div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="modal-dialog">
+            <h3 style="color: red"> {{ message }} </h3>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <form method="post">
+            <div class="modal-body">
+                {% csrf_token %}
+                {% for i in form %}
+                <label>{{i.label}}</label>
+                <input class="form-control" name="{{ i.name }}" type="{{i.field.widget.input_type}}">
+                <div class="col-12 help-text"> {{ i.errors }}</div>
+                {% endfor %}
+
+                <div class="modal-footer">
+                    <button class="btn btn-success" type="submit">Aceptar</button>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block widgets %}
+
+{% endblock %}
+{% block contenido %}
+<div class="table-stats order-table ov-h">
+            <table id="tabla_autores" class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Usuario</th>
+                    <th>Jugada</th>
+                    <th>Fecha</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in object_list %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ i.jugador }}</td>
+                        <td>
+                            <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_uno }}</div>
+                            <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_dos }}</div>
+                            <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_tres }}</div>
+                            <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_cuatro }}</div>
+                            <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_cinco }}</div>
+                            <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">{{ i.numero_seis }}</div>
+                        </td>
+                        <td>{{i.fecha_jugada}}</td>
+                        <td></td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

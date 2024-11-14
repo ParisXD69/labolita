@@ -1,0 +1,171 @@
+{% extends 'index.html' %}
+{% block widgets %}{% endblock %}
+{% block widgets_usuario %}{% endblock %}
+{% block contenido %}
+<h2>Ganancias por aciertos</h2>
+{% for i in lista%}
+    {% if user.privilegios == 'Supremo' %}
+    <a type="button" class="btn btn-success" href="{%  url 'cambiar_premio' i.id %}" >Cambiar premio</a>
+    {% endif %}
+{% endfor %}
+<hr color="black">
+
+<div>
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+    <p style="display: inline-block">100$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    +
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+    <p style="display: inline-block">200$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    +
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+    <p style="display: inline-block">400$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    <p style="display: inline-block">300$</p>
+</div>
+
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    +
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+
+    <p style="display: inline-block">1000$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <p style="display: inline-block">800$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    +
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+
+    <p style="display: inline-block">5000$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <p style="display: inline-block">3500$</p>
+</div>
+<div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    <div style="background-color: gray;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        B
+    </div>
+    +
+    <div style="background-color: yellow;text-align: center;color: white;border-radius: 100px; width: 22px;display: inline-block ">
+        A
+    </div>
+    {% for i in lista %}
+    <p style="display: inline-block">
+
+        {{i.premio}}$
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}

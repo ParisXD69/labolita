@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block widgets %}{% endblock %}
+
+{% block contenido %}
+{% for i in notify %}
+
+<p>{{i}}</p>
+{% endfor %}
+
+{% endblock %}
